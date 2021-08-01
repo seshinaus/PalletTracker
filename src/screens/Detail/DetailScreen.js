@@ -18,12 +18,14 @@ import BottomSheet, {
 } from "@gorhom/bottom-sheet";
 
 import SegmentedControl from "@react-native-segmented-control/segmented-control";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const DetailScreen = ({ route, navigation }) => {
   const { item } = route.params;
   const [selectedItem, setSelectedItem] = useState(item);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const { height, width } = Dimensions.get("window");
+  const { bottom: bottomSafeArea } = useSafeAreaInsets();
   React.useLayoutEffect(() => {
     navigation.setOptions({
       title: item.title,
@@ -45,7 +47,10 @@ const DetailScreen = ({ route, navigation }) => {
 
   const bottomSheetRef = useRef(null);
 
-  const snapPoints = useMemo(() => ["25%", "50%", "90%"], []);
+  const snapPoints = useMemo(
+    () => [bottomSafeArea === 0 ? 80 : bottomSafeArea + 80, "50%", "90%"],
+    [bottomSafeArea]
+  );
 
   const { slots } = selectedItem;
 
@@ -116,7 +121,7 @@ const DetailScreen = ({ route, navigation }) => {
 
       <BottomSheet
         ref={bottomSheetRef}
-        index={1}
+        index={0}
         snapPoints={snapPoints}
         // onChange={handleSheetChanges}
       >

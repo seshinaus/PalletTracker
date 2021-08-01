@@ -96,7 +96,7 @@ const HomeScreen = ({ navigation }) => {
       },
       (buttonIndex) => {
         if (buttonIndex === 0) {
-          navigation.navigate("Scan");
+          navigation.navigate("Scan", { searchMode: false });
         } else if (buttonIndex === 1) {
           setShowManual(true);
         }
@@ -161,8 +161,14 @@ const HomeScreen = ({ navigation }) => {
     setKeyword(text);
   };
 
+  const onPressScan = () => {
+    navigation.navigate("Scan", { searchMode: true });
+  };
+
   const renderSearchHandle = useCallback(() => {
-    return <SearchHandle onChange={onKeywordChange} />;
+    return (
+      <SearchHandle onChange={onKeywordChange} onPressScan={onPressScan} />
+    );
   }, []);
 
   const getDataSource = () => {
@@ -351,7 +357,7 @@ const HomeScreen = ({ navigation }) => {
 
       <BottomSheet
         ref={bottomSheetRef}
-        index={1}
+        index={0}
         key="bottomSheet"
         snapPoints={snapPoints}
         topInset={headerHeight}

@@ -1,17 +1,22 @@
 import React, { Component, useContext, useState } from "react";
 
-import { View, Dimensions, Text, TouchableOpacity } from "react-native";
+import { View, Dimensions, Text, TouchableOpacity, Image } from "react-native";
 import QRCodeScanner from "react-native-qrcode-scanner";
-import Icon from "react-native-vector-icons/Ionicons";
+// import Icon from "react-native-vector-icons/Ionicons";
+import Icon from "react-native-feather1s";
 import * as Animatable from "react-native-animatable";
 import { PalletContext } from "../../context/PalletContext";
 import Dialog from "react-native-dialog";
 const SCREEN_HEIGHT = Dimensions.get("window").height;
 const SCREEN_WIDTH = Dimensions.get("window").width;
 
-const ScanScreen = ({ navigation }) => {
+const ScanScreen = ({ navigation, route }) => {
   const { setCurrentCode, setCount, countToAssign, setCountToAssign } =
     useContext(PalletContext);
+
+  const { searchMode } = route.params;
+
+  const [reactivate, setReactivate] = useState(false);
 
   const [showManual, setShowManual] = useState(false);
 
@@ -22,12 +27,25 @@ const ScanScreen = ({ navigation }) => {
   function onSuccess(e) {
     console.log(e.data);
     // alert(e);
+    setReactivate(false);
     let result = e.data;
+    if (result === null || result === undefined || result === "") {
+      setReactivate(true);
+      return;
+    }
     const re = /-[a-zA-Z0-9]{3}/i;
-    if (result.search(re)) {
+    if (result?.search(re)) {
       result = result.replace(re, "");
     }
+    if (searchMode === true) {
+      setCurrentCode(result);
+      setCount(0);
+      setCountToAssign(0);
+      onBack();
+      return;
+    }
     setManualCode(result);
+    setReactivate(false);
     setShowManual(true);
   }
 
@@ -38,7 +56,7 @@ const ScanScreen = ({ navigation }) => {
   function makeSlideOutTranslation(translationType, fromValue) {
     return {
       from: {
-        [translationType]: SCREEN_WIDTH * -0.18,
+        [translationType]: scanBarWidth / 2,
       },
       to: {
         [translationType]: fromValue,
@@ -63,6 +81,7 @@ const ScanScreen = ({ navigation }) => {
 
   const handleCancel = () => {
     setShowManual(false);
+    setReactivate(true);
   };
 
   return (
@@ -71,6 +90,7 @@ const ScanScreen = ({ navigation }) => {
         showMarker
         onRead={onSuccess}
         cameraStyle={{ height: SCREEN_HEIGHT }}
+        reactivate={reactivate}
         customMarker={
           <View style={styles.rectangleContainer}>
             <View style={styles.topOverlay}>
@@ -84,19 +104,32 @@ const ScanScreen = ({ navigation }) => {
 
               <View style={styles.rectangle}>
                 <Icon
-                  name="ios-scan-sharp"
-                  size={SCREEN_WIDTH * 0.6}
+                  name="maximize"
+                  size={rectDimensions / 1.5 - 20}
                   color={iconScanColor}
+                  style={{
+                    paddingRight: 8,
+                    position: "absolute",
+                  }}
                 />
+                {/* <Image
+                  source={images.crossHair}
+                  style={{
+                    position: "absolute",
+                    width: rectDimensions / 2,
+                    height: rectDimensions,
+                    resizeMode: "contain",
+                  }}
+                /> */}
                 <Animatable.View
                   style={styles.scanBar}
                   direction="alternate-reverse"
                   iterationCount="infinite"
-                  duration={1700}
+                  duration={1200}
                   easing="linear"
                   animation={makeSlideOutTranslation(
                     "translateY",
-                    SCREEN_WIDTH * -0.54
+                    -scanBarWidth / 2
                   )}
                 />
               </View>
@@ -137,11 +170,11 @@ export default ScanScreen;
 
 const overlayColor = "rgba(0,0,0,0.5)"; // this gives us a black color with a 50% transparency
 
-const rectDimensions = SCREEN_WIDTH * 0.65; // this is equivalent to 255 from a 393 device width
+const rectDimensions = SCREEN_WIDTH * 0.8; // this is equivalent to 255 from a 393 device width
 const rectBorderWidth = SCREEN_WIDTH * 0.005; // this is equivalent to 2 from a 393 device width
 const rectBorderColor = "white";
 
-const scanBarWidth = SCREEN_WIDTH * 0.46; // this is equivalent to 180 from a 393 device width
+const scanBarWidth = SCREEN_WIDTH / 3; // this is equivalent to 180 from a 393 device width
 const scanBarHeight = SCREEN_WIDTH * 0.005; //this is equivalent to 1 from a 393 device width
 const scanBarColor = "yellow";
 
@@ -157,7 +190,7 @@ const styles = {
 
   rectangle: {
     height: rectDimensions,
-    width: rectDimensions,
+    width: rectDimensions / 1.5,
     borderWidth: rectBorderWidth,
     borderColor: rectBorderColor,
     alignItems: "center",
@@ -172,6 +205,7 @@ const styles = {
     backgroundColor: overlayColor,
     justifyContent: "center",
     alignItems: "center",
+    flexDirection: "row",
   },
 
   bottomOverlay: {
@@ -185,7 +219,7 @@ const styles = {
   },
 
   leftAndRightOverlay: {
-    height: SCREEN_WIDTH * 0.65,
+    height: SCREEN_WIDTH * 0.8,
     width: SCREEN_WIDTH,
     backgroundColor: overlayColor,
   },

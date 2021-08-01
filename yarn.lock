@@ -5478,6 +5478,13 @@ react-native-dialog@^8.0.1:
   resolved "https://registry.yarnpkg.com/react-native-dialog/-/react-native-dialog-8.0.1.tgz#8e554c4d7ee755c9e20d43bb0c5bb1a158060e57"
   integrity sha512-shm0NE7nZJj5ubvMT/6Snt3fazzRPgDj/m9eIcYjo6JAQbxvg6Ym9o5GGahDn1d96LyAruPoP+N/IBzAI8Worg==
 
+react-native-feather1s@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/react-native-feather1s/-/react-native-feather1s-0.2.3.tgz#1fe18e69d5b719e84464c194414d8128f057927b"
+  integrity sha512-MFdfurGW1aGzMGOM1iuKHViXFrfAcvjWfgBbXBigMp2SGiTGFv51hdkN8UHwUaQcLZsUeaoDBP78yQCiRlRAZA==
+  dependencies:
+    prop-types "^15.7.2"
+
 react-native-gesture-handler@^1.10.3:
   version "1.10.3"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.10.3.tgz#942bbf2963bbf49fa79593600ee9d7b5dab3cfc0"

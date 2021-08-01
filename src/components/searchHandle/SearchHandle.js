@@ -5,15 +5,17 @@ import {
   Dimensions,
   NativeSyntheticEvent,
   TextInputChangeEventData,
+  Image,
+  TouchableOpacity,
 } from "react-native";
 import { useBottomSheet } from "@gorhom/bottom-sheet";
 import { TextInput } from "react-native-gesture-handler";
 import isEqual from "lodash.isequal";
-
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 const { width: SCREEN_WIDTH } = Dimensions.get("screen");
 export const SEARCH_HANDLE_HEIGHT = 69;
 
-const BottomSheetHandleComponent = ({ onChange }) => {
+const BottomSheetHandleComponent = ({ onChange, onPressScan }) => {
   // state
   const [value, setValue] = useState("");
 
@@ -60,6 +62,19 @@ const BottomSheetHandleComponent = ({ onChange }) => {
         onChange={handleInputChange}
         onFocus={handleInputFocus}
       />
+      <TouchableOpacity
+        style={{
+          position: "absolute",
+          right: 30,
+          bottom: 0,
+          top: 0,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+        onPress={onPressScan}
+      >
+        <MaterialCommunityIcons name="barcode-scan" color="black" size={20} />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -70,6 +85,9 @@ export const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 16,
     paddingVertical: 5,
+    // flexDirection: "row",
+    // alignItems: "center",
+    // justifyContent: "space-between",
   },
   indicator: {
     alignSelf: "center",
