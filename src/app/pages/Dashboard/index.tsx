@@ -19,12 +19,14 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
+import { RouterOutlet } from '../../utils/routes'
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="https://junior.team/">
+        junior.team
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -113,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Dashboard() {
+export default function Dashboard({ routes, path, ...rest }: any) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -123,6 +125,8 @@ export default function Dashboard() {
     setOpen(false);
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+
+  console.log('[Dashboard]', routes, rest)
 
   return (
     <div className={classes.root}>
@@ -163,8 +167,11 @@ export default function Dashboard() {
         <Divider />
       </Drawer>
       <main className={classes.content}>
+
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
+          <RouterOutlet path={path} routes={routes} />
+
           <Grid container spacing={3}>
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
@@ -189,6 +196,7 @@ export default function Dashboard() {
             <Copyright />
           </Box>
         </Container>
+
       </main>
     </div>
   );

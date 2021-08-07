@@ -1,13 +1,10 @@
 import ROUTES from "./routes";
-import { RenderRoutes } from "./utils/routes";
-import { BrowserRouter as Router } from 'react-router-dom'
+import { RouterOutlet } from "./utils/routes";
 
 function App() {
 
   return (
-    <Router>
-      <RenderRoutes routes={ROUTES} />
-    </Router>
+    <RouterOutlet path={''} routes={ROUTES} />
   );
 }
 

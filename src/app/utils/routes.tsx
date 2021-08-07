@@ -1,12 +1,12 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 export type RoutePath = {
-  path: string;
+  path?: string;
   exact?: boolean;
   component?: any;
-  key: string;
+  key?: string;
   routes?: RoutePath[];
+  redirect?: string;
 };
 
 /**
@@ -18,23 +18,29 @@ export function RouteWithSubRoutes(route: RoutePath) {
     <Route
       path={route.path}
       exact={route.exact}
-      render={(props) =>
-        route.component ?? <route.component key={route.key} {...props} routes={route.routes} />
-      }
+      render={props => <route.component {...props} path={route.path} routes={route.routes} />}
     />
   );
 }
 
 /**
- * Use this component for any new section of routes (any config object that has a "routes" property
+ * Use this component for any new section of routes (any config object that has a "routes" property. Sorry
+ * for the Angulare reference, but they just hit the spot with naming.
  */
-export function RenderRoutes({ routes }: { routes: RoutePath[] }) {
+export function RouterOutlet({ path, routes, ...rest }: { path: string, routes: RoutePath[] }) {
   return (
-    <Switch>
-      {routes.map((route: any, i: number) => {
-        return <RouteWithSubRoutes key={route.key} {...route} />;
-      })}
-      <Route component={() => <h1>Not Found!</h1>} />
-    </Switch>
+    <Router>
+      <Switch>
+        {routes && routes.map((route: RoutePath, i: number) => {
+          const p = path ? path + route.path : route.path;
+          if (route.redirect) {
+            return <Redirect to={route.redirect} />
+          } else {
+            return <RouteWithSubRoutes {...route} key={route.key || p || 'default'} path={route.path && p} />;
+          }
+        })}
+        <Route component={() => <div><h1>Not Found!</h1><p>Path: {path}</p></div>} />
+      </Switch>
+    </Router>
   );
 }

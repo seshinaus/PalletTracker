@@ -6,21 +6,21 @@ import { RoutePath } from './utils/routes';
 const ROUTES: RoutePath[] = [
   {
     path: '/',
-    key: 'root',
     exact: true,
-    component: <SignInSide/>
+    component: () => <SignInSide/>
   },
   {
     path: '/app',
-    key: 'app',
-    exact: true,
-    component: <Dashboard/>,
-  },
-  {
-    path: '/app/page',
-    key: 'app-page',
-    exact: true,
-    component: <h1>App Page</h1>,
+    component: Dashboard,
+    routes: [
+      {
+        path: '/teams',
+        component: () => <h1>Teams Page</h1>
+      },
+      {
+        component: () => <h1>Home Page</h1>
+      }
+    ]
   },
 ];
 
