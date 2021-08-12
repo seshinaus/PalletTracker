@@ -1,24 +1,19 @@
-import React, { useContext, useMemo, useRef, useState, useEffect } from "react";
+import BottomSheet, { BottomSheetScrollView } from "@gorhom/bottom-sheet";
+import SegmentedControl from "@react-native-segmented-control/segmented-control";
+import React, { useContext, useEffect, useMemo, useRef, useState } from "react";
 import {
   Dimensions,
   SafeAreaView,
   StatusBar,
   StyleSheet,
   Text,
-  View,
   TouchableWithoutFeedback,
+  View,
 } from "react-native";
-import CloseMap from "./components/CloseMap";
-import { PalletContext } from "../../context/PalletContext";
-import shapes from "../../data/shapes";
-import AppleStyleSwipeableRow from "../../components/AppleStyleSwipeableRow";
-import BottomSheet, {
-  BottomSheetSectionList,
-  BottomSheetScrollView,
-} from "@gorhom/bottom-sheet";
-
-import SegmentedControl from "@react-native-segmented-control/segmented-control";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import AppleStyleSwipeableRow from "../../components/AppleStyleSwipeableRow";
+import { PalletContext } from "../../context/PalletContext";
+import CloseMap from "./components/CloseMap";
 
 const DetailScreen = ({ route, navigation }) => {
   const { item } = route.params;
@@ -72,7 +67,12 @@ const DetailScreen = ({ route, navigation }) => {
 
   const getPallets = () => {
     return pallets.filter((item) => {
-      return slots.includes(item.slot);
+      return (
+        slots.includes(item.slot) &&
+        (currentCode !== null && currentCode !== undefined
+          ? item.code === currentCode
+          : true)
+      );
     });
   };
 
@@ -111,6 +111,7 @@ const DetailScreen = ({ route, navigation }) => {
             position: "absolute",
             top: 0,
             left: 0,
+            zIndex: -1,
           }}
         >
           Current Code: {currentCode}
@@ -123,15 +124,25 @@ const DetailScreen = ({ route, navigation }) => {
         ref={bottomSheetRef}
         index={0}
         snapPoints={snapPoints}
+
         // onChange={handleSheetChanges}
       >
-        <BottomSheetScrollView contentContainerStyle={styles.contentContainer}>
+        <BottomSheetScrollView
+          contentContainerStyle={[
+            styles.contentContainer,
+            { paddingBottom: bottomSafeArea },
+          ]}
+          style={{ zIndex: 20 }}
+        >
           <View style={{ paddingVertical: 8 }}>
             <SegmentedControl
               values={["Slots", "Pallets"]}
               selectedIndex={selectedIndex}
               tintColor="black"
-              style={{ height: 36 }}
+              activeFontStyle={{ color: "white" }}
+              backgroundColor="gray"
+              style={{ height: 44 }}
+              tabStyle={{ color: "black" }}
               onChange={(event) => {
                 setSelectedIndex(event.nativeEvent.selectedSegmentIndex);
               }}
@@ -192,13 +203,14 @@ const styles = StyleSheet.create({
   },
   item: {
     flexDirection: "row",
-    alignItems: "flex-start",
+    alignItems: "center",
     justifyContent: "space-between",
     padding: 8,
     // marginHorizontal: 8,
     marginVertical: 4,
     backgroundColor: "gray",
     borderRadius: 4,
+    height: 44,
   },
   title: {
     color: "black",

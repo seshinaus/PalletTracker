@@ -94,8 +94,10 @@ const ScanScreen = ({ navigation, route }) => {
         customMarker={
           <View style={styles.rectangleContainer}>
             <View style={styles.topOverlay}>
-              <Text style={{ fontSize: 30, color: "white" }}>
-                PLEASE SCAN PALLET!
+              <Text
+                style={{ fontSize: 16, color: "white", textAlign: "center" }}
+              >
+                System will move on automatically{"\n"}after code is scanned!
               </Text>
             </View>
 

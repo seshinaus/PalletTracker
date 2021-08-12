@@ -1,22 +1,23 @@
-import React, { useState, useRef, useEffect, useContext } from "react";
+import { Path, Shape, Surface } from "@react-native-community/art";
+import { useNavigation } from "@react-navigation/native";
+import { useHeaderHeight } from "@react-navigation/stack";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import {
+  Alert,
   Dimensions,
   Image,
   StyleSheet,
   TouchableOpacity,
   View,
-  Animated,
-  PanResponder,
-  Alert,
+  Text,
 } from "react-native";
+import Dialog from "react-native-dialog";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import images from "res/images";
-import data from "../../../data/data";
-import { Surface, Shape, Path } from "@react-native-community/art";
-import shapes from "../../../data/shapes";
-import { useNavigation } from "@react-navigation/native";
 import { PalletContext } from "../../../context/PalletContext";
-import Dialog from "react-native-dialog";
+import data from "../../../data/data";
+import shapes from "../../../data/shapes";
 const MAP_WIDTH = 1400;
 const MAP_HEIGHT = 2068;
 const { height, width } = Dimensions.get("window");
@@ -26,12 +27,6 @@ const CloseMap = ({ selectedItem, setSelectedItem }) => {
   const [slotToAdd, setSlotToAdd] = useState(null);
   const navigation = useNavigation();
 
-  useEffect(() => {
-    navigation.setOptions({
-      title: selectedItem.title,
-    });
-  }, [selectedItem]);
-
   const {
     width: tileWidth,
     height: tileHeight,
@@ -39,6 +34,24 @@ const CloseMap = ({ selectedItem, setSelectedItem }) => {
     left: tileLeft,
     slots,
   } = selectedItem;
+
+  const inset = useSafeAreaInsets();
+
+  const snapPoint = useMemo(
+    () => (inset.bottom === 0 ? 100 : inset.bottom + 100),
+    [inset.bottom]
+  );
+  const headerHeight = useHeaderHeight();
+  const factor = Math.min(
+    (width - 80) / tileWidth,
+    (height - 2 * snapPoint - 40 - headerHeight - 80) / tileHeight
+  );
+
+  useEffect(() => {
+    navigation.setOptions({
+      title: selectedItem.title,
+    });
+  }, [selectedItem]);
 
   const { pallets, currentCode, addPallet, existPallet, countToAssign } =
     useContext(PalletContext);
@@ -71,11 +84,19 @@ const CloseMap = ({ selectedItem, setSelectedItem }) => {
     });
   };
 
+  const countAssigned = (slot) => {
+    const reducer = (accumulator, currentValue) =>
+      accumulator + currentValue.count;
+    return pallets
+      .filter((pallet) => {
+        return pallet.slot === slot.id && currentCode === pallet.code;
+      })
+      .reduce(reducer, 0);
+  };
+
   const slotsToShow = shapes.filter((shape) => {
     return slots.includes(shape.id);
   });
-
-  const factor = width / tileWidth;
 
   const moveLeft = () => {
     console.log("moveleft");
@@ -135,15 +156,19 @@ const CloseMap = ({ selectedItem, setSelectedItem }) => {
   return (
     <View
       style={{
-        width: width,
-        height: tileHeight * factor,
+        width: tileWidth * factor + 80,
+        height: tileHeight * factor + 80,
+        marginBottom: snapPoint,
       }}
     >
       <View
         style={{
-          width: width,
+          width: tileWidth * factor,
           height: factor * tileHeight,
           overflow: "hidden",
+          top: 40,
+          left: 40,
+          position: "absolute",
         }}
       >
         <Image
@@ -164,8 +189,8 @@ const CloseMap = ({ selectedItem, setSelectedItem }) => {
             key={id}
             style={{
               position: "absolute",
-              top: (topLeft.y - tileTop) * factor - LINE_WIDTH,
-              left: (topLeft.x - tileLeft) * factor - LINE_WIDTH,
+              top: (topLeft.y - tileTop) * factor - LINE_WIDTH + 40,
+              left: (topLeft.x - tileLeft) * factor - LINE_WIDTH + 40,
               width: (bottomRight.x - topLeft.x) * factor + 2 * LINE_WIDTH,
               height: (bottomRight.y - topLeft.y) * factor + 2 * LINE_WIDTH,
             }}
@@ -183,6 +208,23 @@ const CloseMap = ({ selectedItem, setSelectedItem }) => {
                 strokeWidth={3}
               />
             </Surface>
+            <View
+              style={{
+                position: "absolute",
+                bottom: 0,
+                right: 0,
+                top: 0,
+                left: 0,
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {hasCode(slot) ? (
+                <Text style={{ fontSize: 32 * factor, color: "white" }}>
+                  {countAssigned(slot)}
+                </Text>
+              ) : null}
+            </View>
           </TouchableOpacity>
         );
       })}
@@ -194,8 +236,8 @@ const CloseMap = ({ selectedItem, setSelectedItem }) => {
             left: 0,
             width: 40,
             height: 40,
-            top: (factor * tileHeight) / 2 - 15,
-            zIndex: 10,
+            top: (factor * tileHeight) / 2 - 15 + 40,
+            // zIndex: 10,
             justifyContent: "center",
             alignItems: "center",
           }}
@@ -211,8 +253,8 @@ const CloseMap = ({ selectedItem, setSelectedItem }) => {
             top: 0,
             width: 40,
             height: 40,
-            left: width / 2 - 15,
-            zIndex: 10,
+            left: (tileWidth * factor) / 2 - 15 + 40,
+            // zIndex: 10,
             justifyContent: "center",
             alignItems: "center",
           }}
@@ -228,8 +270,8 @@ const CloseMap = ({ selectedItem, setSelectedItem }) => {
             right: 0,
             width: 40,
             height: 40,
-            top: (factor * tileHeight) / 2 - 15,
-            zIndex: 10,
+            top: (factor * tileHeight) / 2 - 15 + 40,
+            // zIndex: 10,
             justifyContent: "center",
             alignItems: "center",
           }}
@@ -249,8 +291,8 @@ const CloseMap = ({ selectedItem, setSelectedItem }) => {
             bottom: 0,
             width: 40,
             height: 40,
-            left: width / 2 - 15,
-            zIndex: 10,
+            left: (tileWidth * factor) / 2 - 15 + 40,
+            // zIndex: 10,
             justifyContent: "center",
             alignItems: "center",
           }}

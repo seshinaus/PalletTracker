@@ -13,9 +13,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		360AC58DBD7B287D8A015540 /* libPods-palletscanner-palletscannerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B7AE0E4DA783F53FB2F1FC /* libPods-palletscanner-palletscannerTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9FB929CBCD0B4A60B9CE1D77 /* feather1s.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECC87931E2AB4BC68F745CFD /* feather1s.ttf */; };
 		AA7D72DD269FD02000A2F58A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA7D72DC269FD02000A2F58A /* GoogleService-Info.plist */; };
 		D19683C2210695C5D5883114 /* libPods-palletscanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9CEDBECD24BD20323092D9 /* libPods-palletscanner.a */; };
-		9FB929CBCD0B4A60B9CE1D77 /* feather1s.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECC87931E2AB4BC68F745CFD /* feather1s.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +46,8 @@
 		AA7D72DC269FD02000A2F58A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "palletscanner/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF640E47276243BA816170B2 /* Pods-palletscanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-palletscanner.release.xcconfig"; path = "Target Support Files/Pods-palletscanner/Pods-palletscanner.release.xcconfig"; sourceTree = "<group>"; };
 		EA9CEDBECD24BD20323092D9 /* libPods-palletscanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-palletscanner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC87931E2AB4BC68F745CFD /* feather1s.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = feather1s.ttf; path = "../node_modules/react-native-feather1s/Fonts/feather1s.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		ECC87931E2AB4BC68F745CFD /* feather1s.ttf */ = {isa = PBXFileReference; name = "feather1s.ttf"; path = "../node_modules/react-native-feather1s/Fonts/feather1s.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +111,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2EDA1868E72A4169A1B7BD5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ECC87931E2AB4BC68F745CFD /* feather1s.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		7ADEF9928005B78EBDBAF963 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,15 +162,6 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
-		};
-		2EDA1868E72A4169A1B7BD5A /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				ECC87931E2AB4BC68F745CFD /* feather1s.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 

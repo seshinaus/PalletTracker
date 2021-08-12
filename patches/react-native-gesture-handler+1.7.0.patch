@@ -1,0 +1,44 @@
+diff --git a/node_modules/react-native-gesture-handler/android/lib/src/main/java/com/swmansion/gesturehandler/GestureHandlerOrchestrator.java b/node_modules/react-native-gesture-handler/android/lib/src/main/java/com/swmansion/gesturehandler/GestureHandlerOrchestrator.java
+index f08713b..7b9a03b 100644
+--- a/node_modules/react-native-gesture-handler/android/lib/src/main/java/com/swmansion/gesturehandler/GestureHandlerOrchestrator.java
++++ b/node_modules/react-native-gesture-handler/android/lib/src/main/java/com/swmansion/gesturehandler/GestureHandlerOrchestrator.java
+@@ -2,6 +2,7 @@ package com.swmansion.gesturehandler;
+ 
+ import android.graphics.Matrix;
+ import android.graphics.PointF;
++import android.util.Log;
+ import android.view.MotionEvent;
+ import android.view.View;
+ import android.view.ViewGroup;
+@@ -13,6 +14,8 @@ import java.util.Comparator;
+ 
+ import androidx.annotation.Nullable;
+ 
++import com.swmansion.gesturehandler.react.RNGestureHandlerRootHelper;
++
+ public class GestureHandlerOrchestrator {
+ 
+   // The limit doesn't necessarily need to exists, it was just simpler to implement it that way
+@@ -533,6 +536,9 @@ public class GestureHandlerOrchestrator {
+       // state, we delegate the decision to the implementation of GestureHandler#shouldBeCancelledBy
+       return handler.shouldBeCancelledBy(other);
+     }
++    if (other instanceof RNGestureHandlerRootHelper.RootViewGestureHandler && handler instanceof PanGestureHandler) {
++      return false;
++    }
+     return true;
+   }
+ 
+diff --git a/node_modules/react-native-gesture-handler/android/src/main/java/com/swmansion/gesturehandler/react/RNGestureHandlerRootHelper.java b/node_modules/react-native-gesture-handler/android/src/main/java/com/swmansion/gesturehandler/react/RNGestureHandlerRootHelper.java
+index 9bf0c8f..8d4e58c 100644
+--- a/node_modules/react-native-gesture-handler/android/src/main/java/com/swmansion/gesturehandler/react/RNGestureHandlerRootHelper.java
++++ b/node_modules/react-native-gesture-handler/android/src/main/java/com/swmansion/gesturehandler/react/RNGestureHandlerRootHelper.java
+@@ -81,7 +81,7 @@ public class RNGestureHandlerRootHelper {
+     return mRootView;
+   }
+ 
+-  private class RootViewGestureHandler extends GestureHandler {
++  public class RootViewGestureHandler extends GestureHandler {
+     @Override
+     protected void onHandle(MotionEvent event) {
+       int currentState = getState();

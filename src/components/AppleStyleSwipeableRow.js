@@ -35,15 +35,37 @@ export default class AppleStyleSwipeableRow extends Component {
       </Animated.View>
     );
   };
+
+  renderRightSecondAction = (text, color, x, progress) => {
+    const trans = progress.interpolate({
+      inputRange: [0, 1],
+      outputRange: [x, 0],
+    });
+    const pressHandler = () => {
+      this.close();
+      this.props.onRemove();
+    };
+    return (
+      <Animated.View style={{ flex: 1, transform: [{ translateX: 0 }] }}>
+        <RectButton
+          style={[styles.rightAction, { backgroundColor: color }]}
+          onPress={pressHandler}
+        >
+          <Text style={styles.secondActionText}>{text}</Text>
+        </RectButton>
+      </Animated.View>
+    );
+  };
+
   renderRightActions = (progress) => (
     <View
       style={{
-        width: 72,
+        width: 128,
         flexDirection: I18nManager.isRTL ? "row-reverse" : "row",
       }}
     >
-      {/* {this.renderRightAction("More", "#C8C7CD", 192, progress)}
-      {this.renderRightAction("Flag", "#ffab00", 128, progress)} */}
+      {/* {this.renderRightAction("More", "#C8C7CD", 192, progress)} */}
+      {this.renderRightSecondAction("Remove\nOne", "#dd2c00", 64, progress)}
       {this.renderRightAction("Delete", "#dd2c00", 64, progress)}
     </View>
   );
@@ -80,7 +102,12 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 16,
     backgroundColor: "transparent",
-    // padding: 10,
+  },
+  secondActionText: {
+    color: "white",
+    fontSize: 10,
+    textAlign: "center",
+    backgroundColor: "transparent",
   },
   rightAction: {
     alignItems: "center",

@@ -1,5 +1,4 @@
 import React, { createContext, useState, useEffect } from "react";
-import useDataRead from "../hooks/useDataRead";
 import database from "@react-native-firebase/database";
 export const PalletContext = createContext();
 
@@ -44,6 +43,14 @@ const PalletContextProvider = (props) => {
     await database().ref("pallets").child(id).remove();
   };
 
+  const removeOne = async (id) => {
+    await database()
+      .ref("pallets")
+      .child(id)
+      .child("count")
+      .set(database.ServerValue.increment(-1));
+  };
+
   return (
     <PalletContext.Provider
       value={{
@@ -57,6 +64,7 @@ const PalletContextProvider = (props) => {
         countToAssign,
         setCountToAssign,
         deletePallet,
+        removeOne,
       }}
     >
       {props.children}

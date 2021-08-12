@@ -1,0 +1,14 @@
+com/palletscanner/ReactNativeFlipper.java
+ com.palletscanner.ReactNativeFlipper
+ com.palletscanner.ReactNativeFlipper$1
+ com.palletscanner.ReactNativeFlipper$2
+ com.palletscanner.ReactNativeFlipper$2$1
+com/palletscanner/MainActivity.java
+ com.palletscanner.MainActivity
+com/palletscanner/MainApplication.java
+ com.palletscanner.MainApplication
+ com.palletscanner.MainApplication$1
+com/palletscanner/BuildConfig.java
+ com.palletscanner.BuildConfig
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

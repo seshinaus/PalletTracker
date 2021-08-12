@@ -62,6 +62,7 @@ const HomeScreen = ({ navigation }) => {
     countToAssign,
     setCountToAssign,
     deletePallet,
+    removeOne,
   } = useContext(PalletContext);
 
   const onChangeText = (text) => {
@@ -238,7 +239,10 @@ const HomeScreen = ({ navigation }) => {
   const renderItem = ({ item }) => {
     const { id, count } = item;
     return isSearchMode ? (
-      <AppleStyleSwipeableRow onDelete={() => onDelete(id)}>
+      <AppleStyleSwipeableRow
+        onDelete={() => onDelete(id)}
+        onRemove={() => removeOne(id)}
+      >
         <TouchableWithoutFeedback onPress={() => selectItem(item)}>
           <View style={styles.item}>
             <Text style={styles.title}>{item.code ?? id}</Text>
@@ -374,7 +378,10 @@ const HomeScreen = ({ navigation }) => {
           }}
           renderItem={renderItem}
           renderSectionHeader={renderHeader}
-          contentContainerStyle={styles.contentContainer}
+          contentContainerStyle={[
+            styles.contentContainer,
+            { paddingBottom: bottomSafeArea + 20 },
+          ]}
           stickySectionHeadersEnabled={false}
           keyboardDismissMode="interactive"
           keyboardShouldPersistTaps="never"
@@ -393,7 +400,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   contentContainer: {
-    paddingBottom: 20,
     marginHorizontal: 8,
   },
   header: {
@@ -410,13 +416,14 @@ const styles = StyleSheet.create({
   },
   item: {
     flexDirection: "row",
-    alignItems: "flex-start",
+    alignItems: "center",
     justifyContent: "space-between",
     padding: 8,
     // marginHorizontal: 8,
     marginVertical: 4,
     backgroundColor: "gray",
     borderRadius: 4,
+    height: 44,
   },
   title: {
     color: "black",

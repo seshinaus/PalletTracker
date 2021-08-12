@@ -5,13 +5,13 @@
  * @format
  * @flow strict-local
  */
-
-import React, { useEffect } from "react";
-import RootNavigator from "./src/navigation/RootNavigator";
-
+import "react-native-gesture-handler";
 import { ActionSheetProvider } from "@expo/react-native-action-sheet";
-import PalletContextProvider from "./src/context/PalletContext";
 import auth from "@react-native-firebase/auth";
+import React, { useEffect } from "react";
+
+import PalletContextProvider from "./src/context/PalletContext";
+import RootNavigator from "./src/navigation/RootNavigator";
 
 const App = () => {
   const login = async () => {

@@ -7,7 +7,7 @@ const MapOverlayView = ({ item, factor }) => {
   const { id, title, top, left, width, height } = item;
   const navigation = useNavigation();
   const onPress = () => {
-    navigation.navigate("Detail", { item: item });
+    navigation.push("Detail", { item: item });
   };
 
   const { pallets, currentCode } = useContext(PalletContext);

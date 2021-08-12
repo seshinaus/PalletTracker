@@ -8,7 +8,7 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-import { useBottomSheet } from "@gorhom/bottom-sheet";
+import { BottomSheetTextInput, useBottomSheet } from "@gorhom/bottom-sheet";
 import { TextInput } from "react-native-gesture-handler";
 import isEqual from "lodash.isequal";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -51,8 +51,19 @@ const BottomSheetHandleComponent = ({ onChange, onPressScan }) => {
   // render
   return (
     <View style={styles.container}>
+      <View
+        style={{
+          marginTop: 4,
+          marginBottom: 8,
+          alignSelf: "center",
+          width: (7.5 * SCREEN_WIDTH) / 100,
+          height: 4,
+          borderRadius: 4,
+          backgroundColor: "rgba(0, 0, 0, 0.75)",
+        }}
+      />
       <View style={indicatorStyle} />
-      <TextInput
+      <BottomSheetTextInput
         style={styles.input}
         value={value}
         defaultValue={null}
@@ -67,7 +78,7 @@ const BottomSheetHandleComponent = ({ onChange, onPressScan }) => {
           position: "absolute",
           right: 30,
           bottom: 0,
-          top: 0,
+          top: 14,
           alignItems: "center",
           justifyContent: "center",
         }}
@@ -104,6 +115,8 @@ export const styles = StyleSheet.create({
     lineHeight: 20,
     padding: 8,
     backgroundColor: "rgba(151, 151, 151, 0.25)",
+    height: 44,
+    alignItems: "center",
   },
 });
 

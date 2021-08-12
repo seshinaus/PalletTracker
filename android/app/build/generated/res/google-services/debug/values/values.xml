@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">570785866058-l8cu7tadcinh3j73vgvap8cec9qd9bjs.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://pallettracker-3aea7-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">570785866058</string>
+    <string name="google_api_key" translatable="false">AIzaSyCEeRNzZrBmg74eKUx9Tr7qi79uxWBJpWY</string>
+    <string name="google_app_id" translatable="false">1:570785866058:android:74caa28f2733d4742521b3</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCEeRNzZrBmg74eKUx9Tr7qi79uxWBJpWY</string>
+    <string name="google_storage_bucket" translatable="false">pallettracker-3aea7.appspot.com</string>
+    <string name="project_id" translatable="false">pallettracker-3aea7</string>
+</resources>

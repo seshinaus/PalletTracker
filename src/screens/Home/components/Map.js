@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   StyleSheet,
   Text,
@@ -7,26 +7,38 @@ import {
   Dimensions,
   TouchableOpacity,
 } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import images from "res/images";
+import { SEARCH_HANDLE_HEIGHT } from "../../../components/searchHandle";
 import data from "../../../data/data";
 import MapOverlayView from "./MapOverlayView";
+
+import { useHeaderHeight } from "@react-navigation/stack";
 
 const MAP_WIDTH = 1400;
 const MAP_HEIGHT = 2068;
 
 const { height, width } = Dimensions.get("window");
-
 const Map = () => {
-  const factor = width / MAP_WIDTH;
+  const inset = useSafeAreaInsets();
+  const snapPoint = useMemo(
+    () => (inset.bottom === 0 ? SEARCH_HANDLE_HEIGHT / 2 : inset.bottom),
+    [inset.bottom]
+  );
+  const headerHeight = useHeaderHeight();
+  const factor = Math.min(
+    width / MAP_WIDTH,
+    (height - 2 * snapPoint - 40 - headerHeight) / MAP_HEIGHT
+  );
 
   return (
     <View>
       <Image
         source={images.map}
         style={{
-          width: width,
-          height: (width * MAP_HEIGHT) / MAP_WIDTH,
-          marginBottom: 41 * factor,
+          width: MAP_WIDTH * factor,
+          height: MAP_HEIGHT * factor,
+          marginBottom: snapPoint * 2,
           marginRight: 60 * factor,
         }}
       />
@@ -36,39 +48,6 @@ const Map = () => {
     </View>
   );
 };
-
-const AREA_LIST = [
-  {
-    id: 1,
-    title: "VASTAANOTTO",
-    top: 186,
-    left: 211,
-    width: 541,
-    height: 405,
-    image: {
-      uri: images.vastaanotto,
-      size: {
-        width: 548,
-        height: 405,
-      },
-    },
-  },
-  {
-    id: 2,
-    title: "Silkki",
-    top: 186,
-    left: 750,
-    width: 567,
-    height: 405,
-    image: {
-      uri: images.silkki,
-      size: {
-        width: 581,
-        height: 405,
-      },
-    },
-  },
-];
 
 export default Map;
 

@@ -1,0 +1,126 @@
+[
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_res_images_silkki.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-mdpi/src_res_images_silkki.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnavigation_stack_src_views_assets_backiconmask.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-mdpi/node_modules_reactnavigation_stack_src_views_assets_backiconmask.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-xhdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-xhdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnative_libraries_logbox_ui_logboximages_close.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-mdpi/node_modules_reactnative_libraries_logbox_ui_logboximages_close.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-xhdpi_src_res_images_img_barcode_crosshair.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-xhdpi/src_res_images_img_barcode_crosshair.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_materialcommunityicons.json.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/raw/node_modules_reactnativevectoricons_glyphmaps_materialcommunityicons.json"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_res_images_vastaanotto.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-mdpi/src_res_images_vastaanotto.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_feather.json.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/raw/node_modules_reactnativevectoricons_glyphmaps_feather.json"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-xxxhdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-hdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-hdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnative_libraries_logbox_ui_logboximages_chevronleft.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-mdpi/node_modules_reactnative_libraries_logbox_ui_logboximages_chevronleft.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-xxhdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativefeather1s_src_fontelloconfig.json.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/raw/node_modules_reactnativefeather1s_src_fontelloconfig.json"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnative_libraries_logbox_ui_logboximages_chevronright.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-mdpi/node_modules_reactnative_libraries_logbox_ui_logboximages_chevronright.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/raw_app.json.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/raw/app.json"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnative_libraries_logbox_ui_logboximages_loader.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-mdpi/node_modules_reactnative_libraries_logbox_ui_logboximages_loader.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnative_libraries_logbox_ui_logboximages_alerttriangle.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-mdpi/node_modules_reactnative_libraries_logbox_ui_logboximages_alerttriangle.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_res_images_img_barcode_crosshair.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-mdpi/src_res_images_img_barcode_crosshair.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_res_images_map.jpg.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-mdpi/src_res_images_map.jpg"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_src_res_images_img_barcode_crosshair.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-xxhdpi/src_res_images_img_barcode_crosshair.png"
+    },
+    {
+        "merged": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "/Volumes/Work/WorkInProgress/RN/PalletScanner/android/app/build/generated/res/react/debug/drawable-mdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    }
+]
