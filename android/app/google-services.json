@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "570785866058",
-    "firebase_url": "https://pallettracker-3aea7-default-rtdb.firebaseio.com",
-    "project_id": "pallettracker-3aea7",
-    "storage_bucket": "pallettracker-3aea7.appspot.com"
+    "project_number": "223972500868",
+    "firebase_url": "https://pallettrackerconcept-default-rtdb.firebaseio.com",
+    "project_id": "pallettrackerconcept",
+    "storage_bucket": "pallettrackerconcept.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:570785866058:android:74caa28f2733d4742521b3",
+        "mobilesdk_app_id": "1:223972500868:android:4a8fd24daa45ebecaf69d1",
         "android_client_info": {
-          "package_name": "com.palletscanner"
+          "package_name": "com.pallettracker.concept"
         }
       },
       "oauth_client": [
         {
-          "client_id": "570785866058-l8cu7tadcinh3j73vgvap8cec9qd9bjs.apps.googleusercontent.com",
+          "client_id": "223972500868-8rh71sen4sup9ltbgq69er6al9uir7dd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCEeRNzZrBmg74eKUx9Tr7qi79uxWBJpWY"
+          "current_key": "AIzaSyCSRDWQZ1uNmqiYLV7B_pc66HEdvMKdDRc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "570785866058-l8cu7tadcinh3j73vgvap8cec9qd9bjs.apps.googleusercontent.com",
+              "client_id": "223972500868-8rh71sen4sup9ltbgq69er6al9uir7dd.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "570785866058-jemu1srjd7r2bkiein4abjd9ehi6u1c7.apps.googleusercontent.com",
+              "client_id": "223972500868-pel7c69vuluok8pfqb10v7rbjpd1jdj6.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.pallettrack.test"
+                "bundle_id": "com.pallettracker.concept"
               }
             }
           ]

@@ -1,19 +1,13 @@
+import { useHeaderHeight } from "@react-navigation/stack";
 import React, { useMemo } from "react";
 import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Dimensions,
-  TouchableOpacity,
+  Dimensions, Image, StyleSheet, View
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import images from "res/images";
 import { SEARCH_HANDLE_HEIGHT } from "../../../components/searchHandle";
 import data from "../../../data/data";
 import MapOverlayView from "./MapOverlayView";
-
-import { useHeaderHeight } from "@react-navigation/stack";
 
 const MAP_WIDTH = 1400;
 const MAP_HEIGHT = 2068;

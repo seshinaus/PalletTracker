@@ -1,6 +1,6 @@
 export default [
   {
-    id: "VASTAANOTTO-1",
+    id: "AREA1-1",
     number: 1,
     topLeft: { x: 213, y: 201 },
     bottomRight: { x: 317, y: 308 },
@@ -12,7 +12,7 @@ export default [
     ],
   },
   {
-    id: "VASTAANOTTO-2",
+    id: "AREA1-2",
     number: 2,
     topLeft: { x: 213, y: 308 },
     bottomRight: { x: 317, y: 431 },
@@ -24,7 +24,7 @@ export default [
     ],
   },
   {
-    id: "VASTAANOTTO-3",
+    id: "AREA1-3",
     number: 3,
     topLeft: { x: 213, y: 431 },
     bottomRight: { x: 317, y: 547 },
@@ -36,7 +36,7 @@ export default [
     ],
   },
   {
-    id: "VASTAANOTTO-4",
+    id: "AREA1-4",
     number: 4,
     topLeft: { x: 320, y: 201 },
     bottomRight: { x: 413, y: 267 },
@@ -48,7 +48,7 @@ export default [
     ],
   },
   {
-    id: "VASTAANOTTO-5",
+    id: "AREA1-5",
     number: 5,
     topLeft: { x: 413, y: 201 },
     bottomRight: { x: 512, y: 267 },
@@ -60,7 +60,7 @@ export default [
     ],
   },
   {
-    id: "VASTAANOTTO-6",
+    id: "AREA1-6",
     number: 6,
     topLeft: { x: 320, y: 267 },
     bottomRight: { x: 413, y: 341 },
@@ -72,7 +72,7 @@ export default [
     ],
   },
   {
-    id: "VASTAANOTTO-7",
+    id: "AREA1-7",
     number: 7,
     topLeft: { x: 413, y: 267 },
     bottomRight: { x: 512, y: 341 },
@@ -84,7 +84,7 @@ export default [
     ],
   },
   {
-    id: "VASTAANOTTO-8",
+    id: "AREA1-8",
     number: 8,
     topLeft: { x: 357, y: 385 },
     bottomRight: { x: 454, y: 465 },
@@ -96,7 +96,7 @@ export default [
     ],
   },
   {
-    id: "VASTAANOTTO-9",
+    id: "AREA1-9",
     number: 9,
     topLeft: { x: 454, y: 385 },
     bottomRight: { x: 550, y: 465 },
@@ -108,7 +108,7 @@ export default [
     ],
   },
   {
-    id: "VASTAANOTTO-10",
+    id: "AREA1-10",
     number: 10,
     topLeft: { x: 357, y: 465 },
     bottomRight: { x: 454, y: 547 },
@@ -120,7 +120,7 @@ export default [
     ],
   },
   {
-    id: "VASTAANOTTO-11",
+    id: "AREA1-11",
     number: 11,
     topLeft: { x: 454, y: 465 },
     bottomRight: { x: 550, y: 547 },
@@ -132,7 +132,7 @@ export default [
     ],
   },
   {
-    id: "VASTAANOTTO-12",
+    id: "AREA1-12",
     number: 12,
     topLeft: { x: 587, y: 304 },
     bottomRight: { x: 645, y: 409 },
@@ -144,7 +144,7 @@ export default [
     ],
   },
   {
-    id: "VASTAANOTTO-13",
+    id: "AREA1-13",
     number: 13,
     topLeft: { x: 587, y: 409 },
     bottomRight: { x: 645, y: 525 },
@@ -156,7 +156,7 @@ export default [
     ],
   },
   {
-    id: "Silkki-1",
+    id: "AREA2-1",
     number: 1,
     topLeft: { x: 759, y: 201 },
     bottomRight: { x: 873, y: 335 },
@@ -168,7 +168,7 @@ export default [
     ],
   },
   {
-    id: "CUIR-1",
+    id: "AREA3-1",
     number: 1,
     topLeft: { x: 450, y: 667 },
     bottomRight: { x: 564, y: 799 },
@@ -180,7 +180,7 @@ export default [
     ],
   },
   {
-    id: "CUIR-2",
+    id: "AREA3-2",
     number: 2,
     topLeft: { x: 450, y: 799 },
     bottomRight: { x: 564, y: 932 },
@@ -192,7 +192,7 @@ export default [
     ],
   },
   {
-    id: "CUIR-3",
+    id: "AREA3-3",
     number: 3,
     topLeft: { x: 450, y: 932 },
     bottomRight: { x: 512, y: 1034 },
@@ -204,7 +204,7 @@ export default [
     ],
   },
   {
-    id: "CUIR-4",
+    id: "AREA3-4",
     number: 4,
     topLeft: { x: 418, y: 1034 },
     bottomRight: { x: 495, y: 1170 },
@@ -216,7 +216,7 @@ export default [
     ],
   },
   {
-    id: "MARUMATSU-1",
+    id: "AREA4-1",
     number: 1,
     topLeft: { x: 695, y: 672 },
     bottomRight: { x: 750, y: 841 },
@@ -228,7 +228,7 @@ export default [
     ],
   },
   {
-    id: "MARUMATSU-2",
+    id: "AREA4-2",
     number: 2,
     topLeft: { x: 695, y: 893 },
     bottomRight: { x: 750, y: 950 },
@@ -241,7 +241,7 @@ export default [
   },
 
   {
-    id: "MARUMATSU-3",
+    id: "AREA4-3",
     number: 3,
     topLeft: { x: 805, y: 597 },
     bottomRight: { x: 1238, y: 641 },
@@ -253,7 +253,7 @@ export default [
     ],
   },
   {
-    id: "MARUMATSU-4",
+    id: "AREA4-4",
     number: 4,
     topLeft: { x: 792, y: 709 },
     bottomRight: { x: 861, y: 960 },
@@ -267,7 +267,7 @@ export default [
     ],
   },
   {
-    id: "MARUMATSU-5",
+    id: "AREA4-5",
     number: 5,
     topLeft: { x: 1267, y: 597 },
     bottomRight: { x: 1302, y: 641 },
@@ -279,7 +279,7 @@ export default [
     ],
   },
   {
-    id: "MARUMATSU-6",
+    id: "AREA4-6",
     number: 6,
     topLeft: { x: 1095, y: 705 },
     bottomRight: { x: 1163, y: 954 },
@@ -291,7 +291,7 @@ export default [
     ],
   },
   {
-    id: "MARUMATSU-7",
+    id: "AREA4-7",
     number: 7,
     topLeft: { x: 913, y: 1020 },
     bottomRight: { x: 1095, y: 1178 },
@@ -305,7 +305,7 @@ export default [
     ],
   },
   {
-    id: "MARUMATSU-8",
+    id: "AREA4-8",
     number: 8,
     topLeft: { x: 882, y: 1249 },
     bottomRight: { x: 1043, y: 1294 },
@@ -317,7 +317,7 @@ export default [
     ],
   },
   {
-    id: "MARUMATSU-9",
+    id: "AREA4-9",
     number: 9,
     topLeft: { x: 674, y: 1161 },
     bottomRight: { x: 837, y: 1240 },
@@ -329,7 +329,7 @@ export default [
     ],
   },
   {
-    id: "PACIFIC-1",
+    id: "AREA5-1",
     number: 1,
     topLeft: { x: 383, y: 1680 },
     bottomRight: { x: 504, y: 1750 },
@@ -341,7 +341,7 @@ export default [
     ],
   },
   {
-    id: "PACIFIC-2",
+    id: "AREA5-2",
     number: 2,
     topLeft: { x: 581, y: 1680 },
     bottomRight: { x: 621, y: 1844 },
@@ -353,7 +353,7 @@ export default [
     ],
   },
   {
-    id: "PACIFIC-3",
+    id: "AREA5-3",
     number: 3,
     topLeft: { x: 386, y: 1874 },
     bottomRight: { x: 509, y: 1963 },
@@ -365,7 +365,7 @@ export default [
     ],
   },
   {
-    id: "PACIFIC-4",
+    id: "AREA5-4",
     number: 4,
     topLeft: { x: 615, y: 1912 },
     bottomRight: { x: 720, y: 1966 },

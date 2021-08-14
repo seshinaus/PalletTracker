@@ -154,7 +154,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.palletscanner"
+        applicationId "com.pallettracker.concept"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

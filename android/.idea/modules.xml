@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PalletTrackerConcept.iml" filepath="$PROJECT_DIR$/.idea/modules/PalletTrackerConcept.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PalletTrackerConcept.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PalletTrackerConcept.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2056345570/PalletTrackerConcept.react-native-camera.iml" filepath="$PROJECT_DIR$/.idea/modules/-2056345570/PalletTrackerConcept.react-native-camera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/884237606/PalletTrackerConcept.react-native-community_art.iml" filepath="$PROJECT_DIR$/.idea/modules/884237606/PalletTrackerConcept.react-native-community_art.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1836074602/PalletTrackerConcept.react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/1836074602/PalletTrackerConcept.react-native-community_masked-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/270929872/PalletTrackerConcept.react-native-firebase_app.iml" filepath="$PROJECT_DIR$/.idea/modules/270929872/PalletTrackerConcept.react-native-firebase_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-938033255/PalletTrackerConcept.react-native-firebase_auth.iml" filepath="$PROJECT_DIR$/.idea/modules/-938033255/PalletTrackerConcept.react-native-firebase_auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1230421996/PalletTrackerConcept.react-native-firebase_database.iml" filepath="$PROJECT_DIR$/.idea/modules/1230421996/PalletTrackerConcept.react-native-firebase_database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/469729709/PalletTrackerConcept.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/469729709/PalletTrackerConcept.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/822637803/PalletTrackerConcept.react-native-permissions.iml" filepath="$PROJECT_DIR$/.idea/modules/822637803/PalletTrackerConcept.react-native-permissions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-449051569/PalletTrackerConcept.react-native-reanimated.iml" filepath="$PROJECT_DIR$/.idea/modules/-449051569/PalletTrackerConcept.react-native-reanimated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1090052822/PalletTrackerConcept.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/1090052822/PalletTrackerConcept.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2091665810/PalletTrackerConcept.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/-2091665810/PalletTrackerConcept.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/650427721/PalletTrackerConcept.react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/650427721/PalletTrackerConcept.react-native-vector-icons.iml" />
+    </modules>
+  </component>
+</project>

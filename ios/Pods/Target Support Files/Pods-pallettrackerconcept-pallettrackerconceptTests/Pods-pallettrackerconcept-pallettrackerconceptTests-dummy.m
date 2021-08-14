@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_pallettrackerconcept_pallettrackerconceptTests : NSObject
+@end
+@implementation PodsDummy_Pods_pallettrackerconcept_pallettrackerconceptTests
+@end

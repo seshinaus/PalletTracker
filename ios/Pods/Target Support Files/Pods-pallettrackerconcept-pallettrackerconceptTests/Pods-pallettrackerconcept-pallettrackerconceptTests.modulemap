@@ -1,0 +1,6 @@
+module Pods_pallettrackerconcept_pallettrackerconceptTests {
+  umbrella header "Pods-pallettrackerconcept-pallettrackerconceptTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
