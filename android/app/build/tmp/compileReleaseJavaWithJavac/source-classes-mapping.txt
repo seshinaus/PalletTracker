@@ -1,9 +1,0 @@
-com/palletscanner/MainActivity.java
- com.palletscanner.MainActivity
-com/palletscanner/MainApplication.java
- com.palletscanner.MainApplication
- com.palletscanner.MainApplication$1
-com/palletscanner/BuildConfig.java
- com.palletscanner.BuildConfig
-com/facebook/react/PackageList.java
- com.facebook.react.PackageList
